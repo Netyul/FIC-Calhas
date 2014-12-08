@@ -10,9 +10,11 @@
 }
 @media only screen and (min-width: 768px){
 .navbar-nav>li>a {
-	padding-top: 14.5px;
-	padding-bottom: 14.5px;
-	font-size: 16px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 18px;
+	padding-right: 20px;
+	padding-left: 20px;
 }
 
 }
