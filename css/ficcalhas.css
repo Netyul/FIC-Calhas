@@ -22,6 +22,9 @@ margin: 0;
 	padding: 7px;
 	color: #fff;
 }
+header{
+
+}
 @media only screen and (min-width: 481px){
 
 }
@@ -32,6 +35,9 @@ margin: 0;
 	font-size: 18px;
 	padding-right: 20px;
 	padding-left: 20px;
+}
+header{
+	margin-top: 20px;	
 }
 
 }
