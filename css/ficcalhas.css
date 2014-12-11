@@ -21,6 +21,8 @@ margin: 0;
 .top-header{
 	padding: 7px;
 	color: #fff;
+	border-bottom-color: #000;
+	border-size:1px;
 }
 header{
 
