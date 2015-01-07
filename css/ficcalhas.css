@@ -58,5 +58,6 @@ header{
 .navbar-right {
 float: right !important;
 margin-right: 15px;
+margin-top: 20px;
 }
 }
