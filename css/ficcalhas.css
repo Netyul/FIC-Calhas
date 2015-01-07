@@ -34,7 +34,11 @@ margin: 0;
 	border-top-left-radius: 4px;
 }
 header{
-
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 20;
 	
 }
 .carousel {
