@@ -10,6 +10,7 @@
 .navbar-brand img{
 	height: 80px;
 	width: 117px;
+	padding-left: 15px;
 }
 body .navbar {
 height: auto !important;
