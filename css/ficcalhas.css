@@ -32,7 +32,8 @@ header{
 	border: 1px solid #e7e7e7;
 }
 header.conteiner{
-	padding: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 .navbar-right {
 	margin-top: 50px;
