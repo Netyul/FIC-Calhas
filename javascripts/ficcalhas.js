@@ -1,6 +1,7 @@
 /* ----------
 Autor: 	Jefte Amorim da Costa
 ----------- */
+//buscar topo
 $(document).on('click','#header-busca button',function(){
   $( "#shide" ).animate({top:'0px'},"slow");
       });
@@ -26,3 +27,4 @@ $(document).ready(function(){
     });
    
 });
+//fim busca top
