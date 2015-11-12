@@ -1,0 +1,604 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"p",
+				"padding"
+			],
+			[
+				"m",
+				"margin-top"
+			],
+			[
+				"mi",
+				"min-width"
+			],
+			[
+				"f",
+				"float"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"o",
+				"opacity"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"t",
+				"type	Attr"
+			],
+			[
+				"b",
+				"button	Tag"
+			],
+			[
+				"fo",
+				"form	Tag"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"i",
+				"background-image"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
+				"h",
+				"height	Attr"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"l",
+				"link	Tag"
+			],
+			[
+				"border",
+				"border-top-left-radius"
+			],
+			[
+				"border-",
+				"border-top-right-radius"
+			],
+			[
+				"border-ra",
+				"border-bottom-left-radius"
+			],
+			[
+				"bord",
+				"border-color"
+			],
+			[
+				"wi",
+				"width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "css/ficcalhas.css",
+			"settings":
+			{
+				"buffer_size": 2649,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "section{\n	margin-top: 0px;\n}\n.carousel {\nheight: 100%;\nmargin-bottom: 0px;\n}\n.carousel-inner {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n  height: 100%;\n}\n.carousel-inner .item{\n	height: 100%;\n\n}\n.caroucel-caption>h2{\n	padding-top: 10px;\n	padding-bottom: 10px;\n	border: 1px solid #333;\n	\n}\n@media screen and (min-width: 768px){\n	.carousel{\n		height: 100%\n	}\n.carousel-caption {\n	top: 30%;\n  left: 20%;\n  right: 20%;\n  padding-bottom: 30px;\n  margin: 100px;\n  background-color: #333;\n  opacity: 0.65;\n\n}\n.carousel-caption h2{\n	color: #fff;\n	font-weight: bold;\n	opacity: 0.999;\n}\n}",
+			"file": "less/slideshow.less",
+			"file_size": 635,
+			"file_write_time": 130918283669013064,
+			"settings":
+			{
+				"buffer_size": 594,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "stylesheets/stylesheet.css",
+			"settings":
+			{
+				"buffer_size": 7607,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "less/ficcalhas.less",
+			"settings":
+			{
+				"buffer_size": 679,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 8479,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "less/header.less",
+			"settings":
+			{
+				"buffer_size": 2618,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "javascripts/ficcalhas.js",
+			"settings":
+			{
+				"buffer_size": 728,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "less/corpo.less",
+			"settings":
+			{
+				"buffer_size": 383,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "less/marketing.less",
+			"settings":
+			{
+				"buffer_size": 482,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/css",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/email.html",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/images",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/javascripts",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/less"
+	],
+	"file_history":
+	[
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/email.html/email.html",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/email.html/email2.html",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/index.html",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/css/header.css",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/less/header.less",
+		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/css/ficcalhas.css"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "css/ficcalhas.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 16303.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "less/slideshow.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								151,
+								151
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "stylesheets/stylesheet.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7607,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2243,
+								2243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "less/ficcalhas.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								478,
+								478
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4602,
+								1198
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 105.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "less/header.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2158,
+								2158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1934.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "javascripts/ficcalhas.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								497,
+								497
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "less/corpo.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 383,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								255,
+								255
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "less/marketing.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 482,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								317
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ficcalhas.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
