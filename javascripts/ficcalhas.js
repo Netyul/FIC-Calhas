@@ -28,3 +28,30 @@ $(document).ready(function(){
    
 });
 //fim busca top
+//paralax
+$.support.transition = false;
+$(document).ready(function(){
+ 
+   $('div.bgParallax').each(function(){
+    	var $obj = $(this);
+   });	
+});
+var yPos = -($(window).scrollTop() / $obj.data('speed'));
+
+var bgpos = '50% '+ yPos + 'px';
+
+$obj.css('background-position', bgpos );
+
+$('div.bgParallax').each(function(){
+	var $obj = $(this);
+ 
+	$(window).scroll(function() {
+		var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+ 
+		var bgpos = '50% '+ yPos + 'px';
+ 
+		$obj.css('background-position', bgpos );
+ 
+	}); 
+});
+//fim paralax
