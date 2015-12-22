@@ -55,3 +55,11 @@ $('div.bgParallax').each(function(){
 	}); 
 });
 //fim paralax
+//scroll suave
+jQuery(document).ready(function($) {
+$("#scroll").click(function(event){
+event.preventDefault();
+$('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+});
+});
+//fim scroll suave
