@@ -229,6 +229,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/JefteAmorim/Documents/pwngames/pwvision/element/gfx.pck",
 		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/less/marketing.less",
 		"/C/Users/JefteAmorim/Documents/GitHub/ficcalhas/css/ficcalhas.css",
 		"/C/Users/JefteAmorim/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
@@ -384,7 +385,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2125.0,
+						"translation.y": 1496.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -470,7 +471,7 @@
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 217.0,
 						"zoom_level": 1.0
 					},
