@@ -29,7 +29,7 @@ $(document).ready(function(){
 });
 //fim busca top
 //paralax
-$.support.transition = false;
+//$.support.transition = false;
 $(document).ready(function(){
  
    $('div.bgParallax').each(function(){
