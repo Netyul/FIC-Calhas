@@ -1,69 +1,46 @@
-/* ----------
-Autor: 	Jefte Amorim da Costa
------------ */
-//buscar topo
-$(document).on('click','#header-busca button',function(){
-  $( "#shide" ).animate({top:'0px'},"slow");
-      });
-$(document).on('click','button.remove',function(){
-  $( "#shide" ).animate({top:'-80px'},"slow");
-
-      });
-$(document).ready(function(){
-    $("#flip").click(function(){
-    	$(".pull-left").slideUp("slow");
-        $(".pull-right").slideUp("slow");
-        $("#panel").slideDown("slow");
-        
-    });
-   
-});
-$(document).ready(function(){
-    $("#flip2").click(function(){
-    	$(".pull-left").slideDown("slow");
-        $(".pull-right").slideDown("slow");
-        $("#panel").slideUp("slow");
-        
-    });
-   
-});
-//fim busca top
-//paralax
-//$.support.transition = false;
-$(document).ready(function(){
- 
-   $('div.bgParallax').each(function(){
-    	var $obj = $(this);
-   });	
-});
-var yPos = -($(window).scrollTop() / $obj.data('speed'));
-
-var bgpos = '50% '+ yPos + 'px';
-
-$obj.css('background-position', bgpos );
-
-$('div.bgParallax').each(function(){
-	var $obj = $(this);
- 
-	$(window).scroll(function() {
-		var yPos = -($(window).scrollTop() / $obj.data('speed')); 
- 
-		var bgpos = '50% '+ yPos + 'px';
- 
-		$obj.css('background-position', bgpos );
- 
-	}); 
-});
-//fim paralax
-//scroll suave
-jQuery(document).ready(function($) {
-$("#scroll").click(function(event){
-event.preventDefault();
-$('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
-});
-});
-//fim scroll suave
-/*
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      #wideContainer {
+        position: relative;
+        margin: 20px auto;
+        max-width: 800px;
+        height: 200px;
+        border: 10px solid black;
+      }
+      
+      #tallContainer {
+        position: relative;
+        margin: 50px auto;
+        max-width: 400px;
+        height: 800px;
+        border: 10px solid black;
+      }
+      
+      #buttons {
+        position: relative;
+        margin: 0 auto;
+        height: 22px;
+        z-index: 1;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      
+      .image {
+        position: relative;
+      }
+      .imageContainer {
+        overflow: hidden;
+      }
+      .imageContainer.overflow {
+        overflow: visible;
+      }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    /*
      * Plugin Name: Resize Image to Parent Container
      *
      * Author: Christian Varga
@@ -144,3 +121,20 @@ $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
         $('.imageContainer').toggleClass('overflow');
       });
     });
+    </script>
+  </head>
+  <body>
+    <div id="content">
+      <div id="buttons">
+        <a href="#" id="showOverflow">Show Overflow</a>
+        <a href="#" id="hideOverflow">Hide Overflow</a>
+      </div>
+      <div id="wideContainer" class="imageContainer">
+        <img src="images/slide1.jpg" class="image" />
+      </div>
+      <div id="tallContainer" class="imageContainer">
+        <img src="images/slide2.jpg" class="image" />
+      </div>
+    </div>
+  </body>
+</html>
