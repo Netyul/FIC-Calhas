@@ -198,7 +198,7 @@ $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
         document.write('<div class="col-md-3">');
 
         if(showpostthumbnails==true)
-          document.write('<a href="'+posturl+'" target ="_top"><img class="label_thumb" src="'+thumburl+'"/></a>');
+          document.write('<a href="'+posturl+'" target ="_top"><img class="img-thumbnail" src="'+thumburl+'"/></a>');
         document.write('<strong><a href="'+posturl+'" target ="_top">'+posttitle+'</a></strong><br>');
         if("content"in entry){
           var postcontent=entry.content.$t;
