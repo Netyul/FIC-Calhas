@@ -145,7 +145,7 @@ $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
       });
     });
 
-    function labelthumbs(json){
+function labelthumbs(json){
       document.write('<div class="row">');
       for(var i=0; i<numposts; i++){
         var entry=json.feed.entry[i];
@@ -184,17 +184,17 @@ $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
         var cdday=postdate.substring(8,10);
         var monthnames=new Array();
         monthnames[1]="Jan";
-        monthnames[2]="Feb";
+        monthnames[2]="Fev";
         monthnames[3]="Mar";
-        monthnames[4]="Apr";
-        monthnames[5]="May";
+        monthnames[4]="Abr";
+        monthnames[5]="Mai";
         monthnames[6]="Jun";
         monthnames[7]="Jul";
-        monthnames[8]="Aug";
-        monthnames[9]="Sep";
-        monthnames[10]="Oct";
+        monthnames[8]="Ago";
+        monthnames[9]="Set";
+        monthnames[10]="Out";
         monthnames[11]="Nov";
-        monthnames[12]="Dec";
+        monthnames[12]="Des";
         document.write('<div class="col-md-3">');
 
         if(showpostthumbnails==true)
@@ -250,4 +250,4 @@ $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
         document.write('</div>');
   
       }
-    }
+}
