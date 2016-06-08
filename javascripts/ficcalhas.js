@@ -251,12 +251,12 @@ function labelthumbs(json){
   
       }
 }
-$(document).ready(function() {$(' .post-home img, .imageContainer img').attr('src', function(i, src) {
+$(document).ready(function() {$('img#thumbfic').attr('src', function(i, src) {
     return src.replace( 's72-c', 's400-c' );
   });
 });
 $(document).ready(function() {
-  $(' .post-home img, .imageContainer img').attr('src', function(i, src) {
+  $('img#thumbfic').attr('src', function(i, src) {
     return src.replace( 'default.jpg', 'mqdefault.jpg' );
   });
 });
