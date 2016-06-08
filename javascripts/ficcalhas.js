@@ -261,3 +261,8 @@ $(document).ready(function(){
     return src.replace("default.jpg", "mqdefault.jpg");
   });
 });
+$(document).ready(function(){
+  $("#thumbfic").attr("src", function(i,src){
+    $("s72-c").replaceAll("s400-c");
+  })
+})
