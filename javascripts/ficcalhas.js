@@ -256,7 +256,7 @@ $(document).ready(function() {$('#related-posts img, .popular-posts .item-thumbn
   });
 });
 $(document).ready(function() {
-  $('#related-posts img, .popular-posts .item-thumbnail img, .post-home img').attr('src', function(i, src) {
+  $('#related-posts img, .popular-posts .item-thumbnail img, .post-home img, .imageContainer img').attr('src', function(i, src) {
     return 
     src.replace( 'default.jpg', 'mqdefault.jpg' );
   });
