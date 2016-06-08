@@ -251,13 +251,12 @@ function labelthumbs(json){
   
       }
 }
-$(document).ready(function() {$('#related-posts img, .popular-posts .item-thumbnail img, .post-home img,#postfeature img, .imageContainer img').attr('src', function(i, src) {
+$(document).ready(function() {$(' .post-home img, .imageContainer img').attr('src', function(i, src) {
     return src.replace( 's72-c', 's400-c' );
   });
 });
 $(document).ready(function() {
-  $('#related-posts img, .popular-posts .item-thumbnail img, .post-home img, .imageContainer img').attr('src', function(i, src) {
-    return 
-    src.replace( 'default.jpg', 'mqdefault.jpg' );
+  $(' .post-home img, .imageContainer img').attr('src', function(i, src) {
+    return src.replace( 'default.jpg', 'mqdefault.jpg' );
   });
 });
