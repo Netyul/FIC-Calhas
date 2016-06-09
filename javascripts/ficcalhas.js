@@ -253,8 +253,8 @@ function labelthumbs(json){
 }
 $(document).ready(function(){
   $("#thumbfic").attr("src", function(i, src){
-	  while(src) { 
-	  		return src.replace("s72-c", "s400-c");
+	  for(i = 0; i < src; i++) { 
+	  		return src[i].replace("s72-c", "s400-c");
 	  }
   });
 });
