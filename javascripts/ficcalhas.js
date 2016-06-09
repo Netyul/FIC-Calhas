@@ -50,7 +50,7 @@ $('div.bgParallax').each(function(){
  
 		var bgpos = '50% '+ yPos + 'px';
  
-		$obj.css('background-position', bgpos );
+		$obj.css('background-position', bgpos);
  
 	}); 
 });
@@ -256,13 +256,4 @@ $(document).ready(function(){
     return src.replace("s72-c", "s400-c");
   });
 });
-$(document).ready(function(){
-  $("#thumbfic").attr("src", function(i, src){
-    return src.replace("default.jpg", "mqdefault.jpg");
-  });
-});
-$(document).ready(function(){
-  $("#thumbfic").attr("src", function(i,src){
-    $("s72-c").replaceAll("s400-c");
-  })
-})
+
