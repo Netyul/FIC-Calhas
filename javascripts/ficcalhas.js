@@ -161,7 +161,8 @@ function labelthumbs(json){
           }
 
           if(entry.link[k].rel=='alternate'){
-            posturl=entry.link[k].href;break;
+            posturl=entry.link[k].href;
+            break;
           }
         }
 
