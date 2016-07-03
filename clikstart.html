@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      // O seu ID do cliente pode ser recuperada a partir do seu projeto no Google 
+      // Console de desenvolvimento, https://console.developers.google.com
+      var CLIENT_ID = '354125893466-mlfbp3tk8m764pu00eku5dgd5k8elv2n.apps.googleusercontent.com';
+
+      var SCOPES = ['https://www.googleapis.com/auth/drive'];
+
+      /**
+       * Verifique se o usuário atual tenha autorizado esta aplicação.
+       */
+      function checkAuth() {
+        gapi.auth.authorize(
+          {
+            'client_id': CLIENT_ID,
+            'scope': SCOPES.join(' '),
+            'immediate': true
+          }, handleAuthResult);
+      }
+
+      /**
+       *Lidar com resposta do servidor de autorização.
+       *
+       * @param {Object} authResult Resultado da Autorização.
+       */
+      function handleAuthResult(authResult) {
+        var authorizeDiv = document.getElementById('authorize-div');
+        if (authResult && !authResult.error) {
+          // Esconder auth UI, em seguida, carregar biblioteca cliente.
+          authorizeDiv.style.display = 'none';
+          callScriptFunction();
+        } else {
+          // Mostrar auth UI, permitindo que o usuário inicie autorização
+          // botão Autorizar clicando.
+          authorizeDiv.style.display = 'inline';
+        }
+      }
+
+      /**
+       * Iniciado fluxo OAuth em resposta ao botão Autorizar usuário clicar.
+
+       *
+       * @param {Event} evento clique do botão evento.
+       */
+      function handleAuthClick(event) {
+        gapi.auth.authorize(
+          {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+          handleAuthResult);
+        return false;
+      }
+
+      /**
+       * Chama uma função Apps Script para listar as pastas em que o usuário do
+       * pasta raiz do drive.
+       */
+      function callScriptFunction() {
+        var scriptId = "Mjr-A8DL7eSMdq1ZFaYlmf0FkVRYCbc2y";
+
+        // Criar um objeto de solicitação de execução.
+        var request = {
+            'function': 'getFoldersUnderRoot'
+            };
+
+        // Fazer a solicitação da API.
+        var op = gapi.client.request({
+            'root': 'https://script.googleapis.com',
+            'path': 'v1/scripts/' + scriptId + ':run',
+            'method': 'POST',
+            'body': request
+        });
+
+        op.execute(function(resp) {
+          if (resp.error && resp.error.status) {
+            // A API encontrou um problema antes do script
+            // iniciar a execução.
+            appendPre('Error calling API:');
+            appendPre(JSON.stringify(resp, null, 2));
+          } else if (resp.error) {
+            // A API executado, mas o script retornou um erro.
+
+            // Extraia o primeiro conjunto (e única) de detalhes do erro.
+            // Os valores deste objeto são 'mensagem de erro "os scripts e
+            // 'errorType', e uma série de elementos-traço de pilha.
+            var error = resp.error.details[0];
+            appendPre('Script error message: ' + error.errorMessage);
+
+            if (error.scriptStackTraceElements) {
+              // Pode não haver um rastreamento de pilha se o script não começou
+              // execução.
+              appendPre('Script error stacktrace:');
+              for (var i = 0; i < error.scriptStackTraceElements.length; i++) {
+                var trace = error.scriptStackTraceElements[i];
+                appendPre('\t' + trace.function + ':' + trace.lineNumber);
+              }
+            }
+          } else {
+            // A estrutura do resultado dependerá do que os Apps
+            // Script função retorna. Aqui, a função retorna um Apps
+            // Objeto de script com chaves de string e valores, e assim o resultado
+            // é tratada como um objeto JavaScript (folderSet).
+            var folderSet = resp.response.result;
+            if (Object.keys(folderSet).length == 0) {
+                appendPre('No folders returned!');
+            } else {
+              appendPre('Folders under your root folder:');
+              Object.keys(folderSet).forEach(function(id){
+                appendPre('\t' + folderSet[id] + ' (' + id  + ')');
+              });
+            }
+          }
+        });
+      }
+
+      /**
+       * Acrescentar um elemento pre para o corpo contendo a mensagem dada
+       * como seu nó de texto.
+       *
+       * @param {string} Mensagem de texto a ser colocado em pré elemento.
+       */
+      function appendPre(message) {
+        var pre = document.getElementById('output');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
+      }
+
+    </script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+  </head>
+  <body>
+    <div id="authorize-div" style="display: none">
+      <span>Authorize access to Google Apps Script Execution API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
+    <pre id="output"></pre>
+  </body>
+</html>
