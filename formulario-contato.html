@@ -12,37 +12,88 @@
     <script   src="http://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
-   
+   <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script> 
   <script type="text/javascript">
-    // Prevent forms from submitting.
-      $(function preventFormSubmit() {
-        var forms = document.querySelectorAll('form');
-        for (var i = 0; i < forms.length; i++) {
-          forms[i].addEventListener('submit', function(event) {
-            event.preventDefault();
-          });
-        }
-      });
-      $(window.addEventListener('load', preventFormSubmit));
+   
+   var IdCliente = '1054203316845-nnale04qnk6rv4bq0ej5o8nltt1fc7ua.apps.googleusercontent.com';
+   var CliChave = 'dEhdgm-ZhsF-tctE6IB61Qa5';
+   var Scope =  ['https://www.googleapis.com/auth/spreadsheets'];
 
-      $(function handleFormSubmit(formObject) {
-        var dados = formObject;
-        jquery.ajax({
-          type: "POST",
-          url: "https://script.google.com/macros/s/AKfycbwu-9GGS03U6gTTE67Hkw00w6627eRtmdZ3jh3un1eej0zhW7E/exec",
-          data: dados,
-          success: function( data )
-          {
-            alert( data );
-          }
+  function preventFormSubmit() {
+    var forms = document.querySelectorAll('form');
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener('submit', function(event) {
+        event.preventDefault();
         });
-        
-      });
-      $(function updateForm(url) {
-      document.getElementById("formulario").style.display ="none";
-        var div = document.getElementById('output');
+    }
+  }
+  window.addEventListener('load', preventFormSubmit);
+
+  function clicando() {
+        // Step 2: Reference the API key
+        gapi.client.setApiKey(CliChave);
+        window.setTimeout(checkAuth,1);
+      }
+  function checkAuth() {
+        gapi.auth.authorize({client_id: IdCliente, scope: Scope, immediate: true}, Result);
+      }
+  function Result(authResult){
+    var autorizeForm = document.getElementById("formularios");
+    if (authResult && !authResult.error) {
+      autorizeForm.style.display = "none";
+      var div = document.getElementById('output');
         div.innerHTML = '<span>Obrigado! por entra em contato conosco.</span>';
-      });
+
+        var nome  = document.getElementById('FCnome').value;
+        var email = document.getElementById('FCemail').value;
+        var tel   = document.getElementById('FCtel').value;
+        var des   = document.getElementById('FCdescription').value;
+
+        var formVariavel ={
+          FCnome        : nome,
+          FCemail       : email,
+          FCtel         : tel,
+          FCdescription : des  
+        }
+        formPocess(formVariavel);
+
+    }else{
+      autorizeForm.style.display = 'inline';
+    }
+  }
+  function formPocess(FormProcess){
+    var scriptId = "MEHIGpzDpU4cHOVxdlyiiQEFkVRYCbc2y";
+
+    var request = {
+    'function': 'processForm',
+    'parameters': [FormProcess],
+    'devMode': true   // Optional.
+    };
+
+    // Make the request.
+    var op = gapi.client.request({
+      'root': 'https://script.googleapis.com',
+      'path': 'v1/scripts/' + scriptId + ':run',
+      'method': 'POST',
+      'body': request
+    });
+
+    op.execute(function(resp) {
+      if (resp.error && resp.error.status) {
+      // The API encountered a problem before the script started executing.
+        console.log('Error calling API: ' + JSON.stringify(resp, null, 2));
+      } else if (resp.error) {
+      // The API executed, but the script returned an error.
+        var error = resp.error.details[0];
+        console.log('Script error! Message: ' + error.errorMessage);
+      } else {
+        // Here, the function returns an array of strings.
+        var sheetNames = resp.response.result;
+        console.log('Resultado a API Contato e: ' + sheetNames);
+        
+      }
+    });
+  }
 </script>
 <script type="text/javascript">
     /* Máscaras ER */
@@ -72,7 +123,7 @@ window.onload = function(){
   </head>
   <body>
   
-  <form name="contato" method="post" onsubmit="handleFormSubmit(this)" id="formulario">
+  <form  method="post" action="" id="formularios" onsubmit="clicando()">
    <div class="row">
     <label for="exampleInputEmail1" class="col-md-12">Nome:</label>
     <div class="col-md-12">
@@ -94,7 +145,7 @@ window.onload = function(){
   <div class="row">
     <label for="exampleInputPassword1" class="col-md-12">Descrição:</label>
     <div class="col-md-12">
-      <textarea class="form-control" rows="3" required="required" name="FCdescription"></textarea>
+      <textarea class="form-control" rows="3" required="required" name="FCdescription" id="FCdescription"></textarea>
     </div>
   </div>
   <div class="row">
@@ -102,7 +153,7 @@ window.onload = function(){
     <p>descreva tudo o que você presisa em seu orçamento</p>
   </div>
   </div>
-  <button type="submit" class="btn btn-default btn-primary" >Enviar</button>
+  <button type="submit" class="btn btn-default btn-primary" id="enviar">Enviar</button>
 </form>
 <div id="output" class="text-center"></div>
     <table class="table table-bordered">
