@@ -33,10 +33,10 @@ button.remove:hover{color: #00E300;}
 #panel {padding: 5px;display: none;}
 header{background-color: #222222; position: none; top: 0; right: 0; left: 0; z-index: 20; border-bottom: 1px solid #00E300;}
 #header-content #ad {width: 100%;}
-.navbar-toggle{margin-top: 35px;}
+.navbar-toggler{margin-top: 35px;}
 @media only screen and (min-width: 481px){}
 @media only screen and (min-width: 768px){
-.navbar-nav>li>a {padding-top: 22px; padding-bottom: 22px; font-size: 18px; padding-right: 20px; padding-left: 20px;}
+.navbar-nav>li>a {padding-top: 22px; padding-bottom: 22px; font-size: 18px; padding-right: 20px; padding-left: 20px; co}
 header{position: none; margin-top: 0px;	}
 .navbar{border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;}
 .navbar-right {float: right !important; margin-right: 0px; margin-top: 0px;}}
