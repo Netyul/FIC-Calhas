@@ -34,7 +34,9 @@ button.remove:hover{color: #00E300;}
 header{background-color: #222222; position: none; top: 0; right: 0; left: 0; z-index: 20; border-bottom: 1px solid #00E300;}
 #header-content #ad {width: 100%;}
 .navbar-toggler{margin-top: 35px;}
-@media only screen and (min-width: 481px){}
+.navbar-toggler-icon {display: inline-block; width: 1.5em; height: 1.5em; vertical-align: middle; content: ""; background: no-repeat center center; background-size: 100% 100%; color: #ffffff}
+@media only screen and (min-width: 481px){
+}
 @media only screen and (min-width: 768px){
 .navbar-nav>li>a {padding-top: 26px; padding-bottom: 26px; font-size: 18px; padding-right: 20px; padding-left: 20px; color: #ffffff; font-weight: bold;}
 header{position: none; margin-top: 0px;	}
